@@ -1,45 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome</title>
+    <title>Home</title>
+    <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-    <h1>Library Management System</h1>
-    <h1>Welcome, {{welcome_name}}!</h1>
-    <div class="dashboard">
-        <ul>
-            <li><a href="#dashboard">Dashboard</a></li>
-            <li><a href="/books">View Books</a></li>
-            <li><a href="/my-books">My Books</a></li>
-            <li><a href="/logout">Logout</a></li>
-        </ul>
-    </div>
-    <div class="dashboard">
-        <h2>Dashboard</h2>
-        <div class="cards">
-            <div class="card">
-                <h3>Total Books</h3>
-                <p>{{ total_books }}</p>
-            </div>
-            <div class="card">
-                <h3>Available Books</h3>
-                <p>{{ available_books }}</p>
-            </div>
-            <div class="card">
-                <h3>Issued Books</h3>
-                <p>{{ issued_books }}</p>
-            </div>
-            <div class="card">
-                <h3>Overdue Books</h3>
-                <p>{{ overdue_books }}</p>
-            </div>
-            <div class="card">
-                <h3>Total Users</h3>
-                <p>{{ total_users }}</p>
-            </div>
-        </div>
-    </div>
+
+<nav>
+    <a href="/home?username={{ user }}">Home</a>
+    <a href="/add">Add Book</a>
+    <a href="/view">View Books</a>
+    <a href="/issue">Issue</a>
+    <a href="/return">Return</a>
+    <a href="/fines">Fines</a>
+</nav>
+
+<h2>Welcome {{ user }}</h2>
+
 </body>
 </html>

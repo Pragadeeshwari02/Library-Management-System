@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Signup</title>
+    <title>Issue Book</title>
     <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
 
+<nav>
+    <a href="/home">Home</a>
+</nav>
+
 <form method="POST">
-    <h2>Signup</h2>
+    <h2>Issue Book</h2>
 
+    <input type="number" name="book_id" placeholder="Book ID" required>
     <input type="text" name="username" placeholder="Username" required>
-    <input type="password" name="password" placeholder="Password" required>
 
-    <button type="submit">Register</button>
-
-    <a href="/">Back to Login</a>
+    <button type="submit">Issue</button>
 </form>
 
 </body>

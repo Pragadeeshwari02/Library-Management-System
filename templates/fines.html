@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fines</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<nav>
+    <a href="/home">Home</a>
+</nav>
+
+<h2>Fine Details</h2>
+
+{% if fine is not none %}
+    <h3 style="text-align:center;">Fine: ₹{{ fine }}</h3>
+{% endif %}
+
+{% if data %}
+<table>
+<tr>
+    <th>User</th>
+    <th>Book ID</th>
+    <th>Fine</th>
+</tr>
+
+{% for d in data %}
+<tr>
+    <td>{{ d[2] }}</td>
+    <td>{{ d[1] }}</td>
+    <td>{{ d[5] }}</td>
+</tr>
+{% endfor %}
+</table>
+{% endif %}
+
+</body>
+</html>
